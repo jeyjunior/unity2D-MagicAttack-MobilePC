@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MagicBehavior : MonoBehaviour
 {
-    public Player player;
+    public PlayerControll playerControll;
     public float speed = 5f;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerControll = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControll>();
     }
     
     void FixedUpdate()
     {
-        if (player.mirrored)
+        if (playerControll.mirrored)
         {
             transform.position += new Vector3(2 * speed, 0, 0) * Time.deltaTime;
         }
