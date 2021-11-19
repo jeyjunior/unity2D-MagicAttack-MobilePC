@@ -152,7 +152,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1507352557}
+  - {fileID: 370743668}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -429,13 +431,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370743665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8, y: 0.64, z: 2.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.8, y: 1.42, z: 2.15}
   m_LocalScale: {x: 4.009, y: 4.009, z: 4.009}
   m_Children:
   - {fileID: 1905750594}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 307767930}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458142176
 GameObject:
@@ -785,7 +787,7 @@ GameObject:
   - component: {fileID: 1058322098}
   - component: {fileID: 1058322097}
   m_Layer: 5
-  m_Name: Text
+  m_Name: txtDelayCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,6 +868,7 @@ GameObject:
   - component: {fileID: 1140711885}
   - component: {fileID: 1140711887}
   - component: {fileID: 1140711888}
+  - component: {fileID: 1140711889}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1029,13 +1032,26 @@ MonoBehaviour:
   speedMove: 3
   moveX: 0
   mirrored: 1
+--- !u!114 &1140711889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140711882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28e4823115c08948a036323cfbc3771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnMagic: {fileID: 1495559795}
+  txtBtnMagic: {fileID: 1058322097}
   animDuration: 0
   delayAnim: 0
-  delayMagiaEsferaDagua: 5
+  delayMagiaEsferaDagua: 2
   valueDelayMagiaEsferaDagua: 0
   magiaEsferaDagua: {fileID: 7870728460752665831, guid: 4f340f7839a617740abf65a5246d0684,
     type: 3}
-  btnMagic: {fileID: 1495559795}
 --- !u!1 &1495559793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,8 +1135,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1140711888}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1140711889}
+        m_TargetAssemblyTypeName: PlayerMagics, Assembly-CSharp
         m_MethodName: MobileAtk
         m_Mode: 1
         m_Arguments:
@@ -1281,13 +1297,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507352554}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -6.96, y: 0.64, z: 2.15}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -6.96, y: 1.42, z: 2.15}
   m_LocalScale: {x: 4.009, y: 4.009, z: 4.009}
   m_Children:
   - {fileID: 308163753}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 307767930}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1534364558
 GameObject:
@@ -1306,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1534364559
 RectTransform:
   m_ObjectHideFlags: 0

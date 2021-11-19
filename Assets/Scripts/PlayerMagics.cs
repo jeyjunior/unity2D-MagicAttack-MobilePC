@@ -11,9 +11,10 @@ public class PlayerMagics : MonoBehaviour
 
     //Btn ativado/desativado
     public Button btnMagic;
+    public Text txtBtnMagic;
 
     //Magia Esfera Dagua
-    public float animDuration, delayAnim, delayMagiaEsferaDagua = 5;
+    public float animDuration, delayAnim, delayMagiaEsferaDagua = 2;
     [SerializeField] float valueDelayMagiaEsferaDagua; //Essa var recebe os valores de delay
     public GameObject magiaEsferaDagua;
 
@@ -25,6 +26,7 @@ public class PlayerMagics : MonoBehaviour
         playerControll = GetComponent<PlayerControll>();
         valueDelayMagiaEsferaDagua = delayMagiaEsferaDagua;
         btnMagic.interactable = false;
+        txtBtnMagic.enabled = false;
     }
 
     private void Update()
@@ -41,10 +43,15 @@ public class PlayerMagics : MonoBehaviour
         if (!btnMagic.interactable)
         {
             valueDelayMagiaEsferaDagua -= Time.deltaTime;
+            
+            txtBtnMagic.enabled = true;
+            txtBtnMagic.text = valueDelayMagiaEsferaDagua.ToString("F2");
+
 
             if (valueDelayMagiaEsferaDagua <= 0)
             {
                 btnMagic.interactable = true;
+                txtBtnMagic.enabled = false;
                 valueDelayMagiaEsferaDagua = delayMagiaEsferaDagua;
             }
         }
