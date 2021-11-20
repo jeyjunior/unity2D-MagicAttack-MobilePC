@@ -12,8 +12,6 @@ public class FXDestroy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         delayAnim = anim.runtimeAnimatorController.animationClips.Length; // anim duration time
-
-        
     }
 
     private void Update()

@@ -19,6 +19,10 @@ public class PlayerMagics : MonoBehaviour
     public GameObject magiaEsferaDagua;
 
 
+    //Magia Espinhos
+    public GameObject magiaEspinhosDagua;
+
+
 
 
     private void Start()
@@ -70,30 +74,42 @@ public class PlayerMagics : MonoBehaviour
             setValuesMagicStatus("isAtk", false);
         }
     }
+
     void setValuesMagicStatus(string parAnim, bool valueParAnim)
     {
        playerControll.anim.SetBool(parAnim, valueParAnim);
     }
     #endregion
 
-    #region Controle uso da magia com um botão
+    #region Cast EsferaDagua
     //Define isAtk como verdadeiro, qual atk é executado, e por quanto tempo isAtk ficara como true
-    public void EsferaDaguaAtk()
+    public void SpawnMagics(string name)
     {
         if (btnMagic.interactable)
         {
             btnMagic.interactable = false;
-
-            playerControll.anim.Play("mEsferaDagua");
-            AnimClipTime();
-            Invoke("mEsferaDagua", .1f);
+            InstantiateObjects(name);
         }
     }
 
-    void mEsferaDagua()
+    void InstantiateObjects(string gameObject)
     {
-        Instantiate(magiaEsferaDagua, playerControll.spawnPoint.position, Quaternion.identity);
+        playerControll.anim.Play("spawn");
+        AnimClipTime();
+
+        if (gameObject == "magiaEsferaDagua") 
+        { 
+            Instantiate(magiaEsferaDagua, playerControll.spawnPointHand.position, Quaternion.identity); 
+        }
+        else if (gameObject == "magiaEspinhosDagua") 
+        { 
+            Instantiate(magiaEspinhosDagua, playerControll.spawnPointEspinhos.position, Quaternion.identity); 
+        }
     }
+
+
+
+
 
     //Definindo o valor do delay de acordo com a magia acionada
     void AnimClipTime()
@@ -110,4 +126,7 @@ public class PlayerMagics : MonoBehaviour
         }
     }
     #endregion
+
+
+
 }
