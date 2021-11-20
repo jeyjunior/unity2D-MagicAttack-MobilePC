@@ -9,7 +9,10 @@ public class PlayerControll : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb2d;
     public Joystick joystick;
+
     public Transform cam;
+    public float camAxisY = -0.7f;
+
     public AnimationClip[] clipsAnim;
 
     //SpawnArea
@@ -38,7 +41,7 @@ public class PlayerControll : MonoBehaviour
 
     private void FixedUpdate(){
         //Camera
-        cam.transform.position = new Vector3(transform.position.x, transform.position.y + 1, -10f);
+        cam.transform.position = new Vector3(transform.position.x, transform.position.y + camAxisY, -10f);
         if (!anim.GetBool("isAtk")) Move();
     }
 

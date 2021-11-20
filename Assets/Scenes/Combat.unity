@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308163752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.217, z: 0.09728112}
+  m_LocalPosition: {x: -0.007, y: -0.217, z: -0.081}
   m_LocalScale: {x: 2.6906066, y: 0.6257795, z: 0.24943878}
   m_Children: []
   m_Father: {fileID: 1507352557}
@@ -362,15 +362,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.004430592, y: 0.14665602}
-      - {x: -0.07777745, y: 0.09775998}
-      - {x: -0.106040195, y: 0.016951695}
-      - {x: -0.08331776, y: -0.06224001}
-      - {x: -0.11443338, y: -0.2311127}
-      - {x: -0.007806435, y: -0.23555782}
-      - {x: -0.011939611, y: -0.06163425}
-      - {x: 0.056647226, y: 0.040008742}
-      - {x: 0.05887557, y: 0.1111011}
+    - - {x: 0.054257523, y: 0.20360087}
+      - {x: 0.036112297, y: 0.13335049}
+      - {x: 0.038694695, y: 0.024069821}
+      - {x: -0.030055674, y: -0.05558772}
+      - {x: -0.048653502, y: -0.11327932}
+      - {x: -0.039292924, y: -0.2311127}
+      - {x: 0.0751071, y: -0.23037572}
+      - {x: 0.023651067, y: -0.07824316}
+      - {x: 0.085119724, y: 0.030517926}
+      - {x: 0.08972072, y: 0.15380973}
 --- !u!212 &370743667
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -464,7 +465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458142176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.01, z: 0.39}
+  m_LocalPosition: {x: -0.07, y: -0.37, z: 0.39}
   m_LocalScale: {x: 3.1265626, y: 0.83625, z: 1}
   m_Children: []
   m_Father: {fileID: 1140711884}
@@ -599,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.85, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -629,7 +630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936807346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.753, y: 0.437, z: 0}
+  m_LocalPosition: {x: 0.606, y: 0.11, z: -0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140711884}
@@ -917,7 +918,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793639957104055765, guid: 16b7e527196b36b44af255209e0aed86,
+  m_Sprite: {fileID: 4334783836991956000, guid: be59fdbe9fb84bb4aa561d3f70096db8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -937,7 +938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140711882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -0.15, z: 0}
+  m_LocalPosition: {x: -0.14, y: 1.41, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 458142177}
@@ -958,18 +959,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21885498, y: 0.32}
+  m_Offset: {x: -0.07227534, y: -0.060895428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0.52, y: 0.63}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 0.81}
     newSize: {x: 0.5, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4319118, y: 0.64}
+  m_Size: {x: 0.48043358, y: 0.62544334}
   m_EdgeRadius: 0
 --- !u!50 &1140711886
 Rigidbody2D:
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   rb2d: {fileID: 0}
   joystick: {fileID: 1780692297}
   cam: {fileID: 519420032}
+  camAxisY: -0.7
   clipsAnim: []
   spawnPoint: {fileID: 936807347}
   speedMove: 3
@@ -1048,7 +1050,7 @@ MonoBehaviour:
   txtBtnMagic: {fileID: 1058322097}
   animDuration: 0
   delayAnim: 0
-  delayMagiaEsferaDagua: 2
+  delayMagiaEsferaDagua: 1
   valueDelayMagiaEsferaDagua: 0
   magiaEsferaDagua: {fileID: 7870728460752665831, guid: 4f340f7839a617740abf65a5246d0684,
     type: 3}
@@ -1137,7 +1139,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140711889}
         m_TargetAssemblyTypeName: PlayerMagics, Assembly-CSharp
-        m_MethodName: MobileAtk
+        m_MethodName: EsferaDaguaAtk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1160,14 +1162,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7118232, b: 0, a: 1}
+  m_Color: {r: 0.069230795, g: 0, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1228,15 +1230,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.004430592, y: 0.14665602}
-      - {x: -0.07777745, y: 0.09775998}
-      - {x: -0.106040195, y: 0.016951695}
-      - {x: -0.08331776, y: -0.06224001}
-      - {x: -0.11443338, y: -0.2311127}
-      - {x: -0.007806435, y: -0.23555782}
-      - {x: -0.011939611, y: -0.06163425}
-      - {x: 0.056647226, y: 0.040008742}
-      - {x: 0.05887557, y: 0.1111011}
+    - - {x: 0.08345723, y: 0.19304119}
+      - {x: 0.039044447, y: 0.1475811}
+      - {x: 0.058884934, y: 0.05990094}
+      - {x: -0.012881085, y: -0.05021423}
+      - {x: -0.038501278, y: -0.092939466}
+      - {x: -0.07013569, y: -0.23439403}
+      - {x: 0.109015465, y: -0.23040393}
+      - {x: 0.08426672, y: -0.06335221}
+      - {x: 0.10818632, y: 0.050316572}
+      - {x: 0.10182481, y: 0.14030658}
 --- !u!212 &1507352556
 SpriteRenderer:
   m_ObjectHideFlags: 0

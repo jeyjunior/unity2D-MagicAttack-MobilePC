@@ -32,6 +32,7 @@ public class PlayerMagics : MonoBehaviour
     private void Update()
     {
         animDelayControll();
+
     }
 
 
@@ -77,7 +78,7 @@ public class PlayerMagics : MonoBehaviour
 
     #region Controle uso da magia com um botão
     //Define isAtk como verdadeiro, qual atk é executado, e por quanto tempo isAtk ficara como true
-    public void MobileAtk()
+    public void EsferaDaguaAtk()
     {
         if (btnMagic.interactable)
         {

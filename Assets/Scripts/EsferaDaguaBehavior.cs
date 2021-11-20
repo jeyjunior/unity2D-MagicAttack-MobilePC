@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicBehavior : MonoBehaviour
+public class EsferaDaguaBehavior : MonoBehaviour
 {
     public PlayerControll playerControll;
-    public float speed = 5f;
+    public float speed = 6f;
+
+    //Splash FX
+    public GameObject esferaDaguaSplash;
+
 
     void Start()
     {
+        Instantiate(esferaDaguaSplash, transform.position, Quaternion.identity); //FX no inicio da magia
         playerControll = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControll>();
     }
     
@@ -30,6 +35,7 @@ public class MagicBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Alvo"))
         {
             Destroy(this.gameObject);
+            Instantiate(esferaDaguaSplash, transform.position, Quaternion.identity);
         }
     }
 }

@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 16b7e527196b36b44af255209e0aed86
+guid: 8a8fbeb082c958543a7609dc1fbcdc12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8793639957104055765
-    second: idle_0
+      213: 9218446649532383458
+    second: esferaDagua_0
   - first:
-      213: 6084859605308855041
-    second: idle_1
+      213: 4245760450113779719
+    second: esferaDagua_1
   - first:
-      213: 8603369663158992956
-    second: idle_2
+      213: -1783997578308062635
+    second: esferaDagua_2
   - first:
-      213: -5906421172241655209
-    second: idle_3
+      213: 7035650587991168215
+    second: esferaDagua_3
+  - first:
+      213: -5625948912119419883
+    second: esferaDagua_4
+  - first:
+      213: -6381783514157176409
+    second: esferaDagua_5
+  - first:
+      213: -6504213191275448306
+    second: esferaDagua_6
+  - first:
+      213: 5763211587798412706
+    second: esferaDagua_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,6 +47,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -66,9 +79,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -111,85 +127,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_0
+      name: esferaDagua_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 52
-        height: 63
-      alignment: 6
+        x: 0
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d55ed543f8490a70800000000000000
-      internalID: 8793639957104055765
+      spriteID: 2e08446e2608eef70800000000000000
+      internalID: 9218446649532383458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_1
+      name: esferaDagua_1
       rect:
         serializedVersion: 2
-        x: 57
-        y: 1
-        width: 49
-        height: 65
-      alignment: 6
+        x: 85
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103de827293c17450800000000000000
-      internalID: 6084859605308855041
+      spriteID: 7083f6662a8fbea30800000000000000
+      internalID: 4245760450113779719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_2
+      name: esferaDagua_2
       rect:
         serializedVersion: 2
-        x: 112
-        y: 1
-        width: 48
-        height: 64
-      alignment: 6
+        x: 170
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c30c6f3402f456770800000000000000
-      internalID: 8603369663158992956
+      spriteID: 5527ac097a7fd37e0800000000000000
+      internalID: -1783997578308062635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_3
+      name: esferaDagua_3
       rect:
         serializedVersion: 2
-        x: 166
-        y: 1
-        width: 49
-        height: 65
-      alignment: 6
+        x: 255
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a90b6cc3d280ea0800000000000000
-      internalID: -5906421172241655209
+      spriteID: 7d45bfceee6a3a160800000000000000
+      internalID: 7035650587991168215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esferaDagua_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c60a0a54d9ce1b0800000000000000
+      internalID: -5625948912119419883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esferaDagua_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9a73db4b95f67a0800000000000000
+      internalID: -6381783514157176409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esferaDagua_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08fd9630946cb5a0800000000000000
+      internalID: -6504213191275448306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esferaDagua_7
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 0
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ada320876a0bff40800000000000000
+      internalID: 5763211587798412706
       vertices: []
       indices: 
       edges: []
