@@ -10,8 +10,9 @@ public class PlayerMagics : MonoBehaviour
     PlayerControll playerControll;
 
     //Btn ativado/desativado
-    public Button btnMagic;
-    public Text txtBtnMagic;
+    public Button btnEsfera, btnEspinhos;
+
+    public Text txtBtnEsfera, txtBtnEspinhos;
 
     //Magia Esfera Dagua
     public float animDuration, delayAnim, delayMagiaEsferaDagua = 2;
@@ -20,22 +21,33 @@ public class PlayerMagics : MonoBehaviour
 
 
     //Magia Espinhos
+    public float delayMagiaEspinhoDagua = 5f;
+    [SerializeField] float valueDelayMagiaEspinhosDagua;
     public GameObject magiaEspinhosDagua;
 
 
-
+    //FX Spawns
+    public GameObject fxSpawn;
 
     private void Start()
     {
         playerControll = GetComponent<PlayerControll>();
+
+        //Esfera dagua delay
         valueDelayMagiaEsferaDagua = delayMagiaEsferaDagua;
-        btnMagic.interactable = false;
-        txtBtnMagic.enabled = false;
+        btnEsfera.interactable = false;
+        txtBtnEsfera.enabled = false;
+
+        //Espinhos dagua delay
+        valueDelayMagiaEspinhosDagua = delayMagiaEspinhoDagua;
+        btnEspinhos.interactable = false;
+        txtBtnEspinhos.enabled = false;
     }
 
     private void Update()
     {
         animDelayControll();
+
 
     }
 
@@ -44,23 +56,44 @@ public class PlayerMagics : MonoBehaviour
     void animDelayControll()
     {
 
-        //Botao da magia esfera dagua fica ativado ou desativado de acordo com o delay apos castar a magia
-        if (!btnMagic.interactable)
+        //Botao da magia fica ativado ou desativado de acordo com o delay apos castar a magia
+        #region Delay magias
+
+        //DELAY ESFERA DAGUA
+        if (!btnEsfera.interactable)
         {
             valueDelayMagiaEsferaDagua -= Time.deltaTime;
-            
-            txtBtnMagic.enabled = true;
-            txtBtnMagic.text = valueDelayMagiaEsferaDagua.ToString("F2");
+
+            txtBtnEsfera.enabled = true;
+            txtBtnEsfera.text = valueDelayMagiaEsferaDagua.ToString("F2");
 
 
             if (valueDelayMagiaEsferaDagua <= 0)
             {
-                btnMagic.interactable = true;
-                txtBtnMagic.enabled = false;
+                btnEsfera.interactable = true;
+                txtBtnEsfera.enabled = false;
                 valueDelayMagiaEsferaDagua = delayMagiaEsferaDagua;
             }
         }
 
+
+        //DELAY ESPINHOS DAGUA
+        if (!btnEspinhos.interactable)
+        {
+            valueDelayMagiaEspinhosDagua -= Time.deltaTime;
+
+            txtBtnEspinhos.enabled = true;
+            txtBtnEspinhos.text = valueDelayMagiaEspinhosDagua.ToString("F2");
+
+            if(valueDelayMagiaEspinhosDagua <= 0)
+            {
+                btnEspinhos.interactable = true;
+                txtBtnEspinhos.enabled = false;
+                valueDelayMagiaEspinhosDagua = delayMagiaEspinhoDagua;
+            }
+        }
+
+        #endregion
 
 
         //Começar o processo de delay sempre que um atk é realizado
@@ -81,50 +114,52 @@ public class PlayerMagics : MonoBehaviour
     }
     #endregion
 
-    #region Cast EsferaDagua
+
+
+    #region Cast Magias
     //Define isAtk como verdadeiro, qual atk é executado, e por quanto tempo isAtk ficara como true
-    public void SpawnMagics(string name)
+    public void SpawnEsferaDagua()
     {
-        if (btnMagic.interactable)
+        if (btnEsfera.interactable)
         {
-            btnMagic.interactable = false;
-            InstantiateObjects(name);
+            InstantiateObjects("magiaEsferaDagua");
         }
     }
 
+    public void SpawnEspinhosDagua()
+    {
+        if (btnEspinhos.interactable)
+        {
+            InstantiateObjects("magiaEspinhosDagua");
+        }
+    }
+
+
+
+    //Spawn Magia
     void InstantiateObjects(string gameObject)
     {
         playerControll.anim.Play("spawn");
-        AnimClipTime();
 
+        //SpawnFX
+        Instantiate(fxSpawn, playerControll.spawnPointFxSpawn.transform.position, Quaternion.identity);
+
+        //Delay para voltar a andar
+        animDuration = 0.3f;
+
+        //Spawn Magias
         if (gameObject == "magiaEsferaDagua") 
-        { 
+        {
+            btnEsfera.interactable = false;
             Instantiate(magiaEsferaDagua, playerControll.spawnPointHand.position, Quaternion.identity); 
         }
         else if (gameObject == "magiaEspinhosDagua") 
-        { 
+        {
+            btnEspinhos.interactable = false;
             Instantiate(magiaEspinhosDagua, playerControll.spawnPointEspinhos.position, Quaternion.identity); 
         }
     }
 
-
-
-
-
-    //Definindo o valor do delay de acordo com a magia acionada
-    void AnimClipTime()
-    {
-        //pegamos o valor de duração das anims de atk e passamos para as var de duração
-        foreach (AnimationClip clip in playerControll.clipsAnim)
-        {
-            switch (clip.name)
-            {
-                case "mEsferaDagua":
-                    animDuration = clip.length;
-                    break;
-            }
-        }
-    }
     #endregion
 
 

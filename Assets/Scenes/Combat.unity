@@ -589,7 +589,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140711884}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945794907
 GameObject:
@@ -896,6 +896,7 @@ Transform:
   m_LocalPosition: {x: -0.14, y: 1.01, z: 0.22}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
+  - {fileID: 2125781361}
   - {fileID: 936807347}
   - {fileID: 2107179423}
   m_Father: {fileID: 0}
@@ -985,7 +986,9 @@ MonoBehaviour:
   cam: {fileID: 519420032}
   camAxisY: -0.7
   clipsAnim: []
+  spawnPointFxSpawn: {fileID: 2125781361}
   spawnPointHand: {fileID: 936807347}
+  spawnPointEspinhos: {fileID: 2107179423}
   speedMove: 3
   moveX: 0
   mirrored: 1
@@ -1001,16 +1004,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28e4823115c08948a036323cfbc3771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnMagic: {fileID: 1495559795}
-  txtBtnMagic: {fileID: 1058322097}
+  btnEsfera: {fileID: 1495559795}
+  btnEspinhos: {fileID: 1930642220}
+  txtBtnEsfera: {fileID: 1058322097}
+  txtBtnEspinhos: {fileID: 255843294}
   animDuration: 0
   delayAnim: 0
   delayMagiaEsferaDagua: 1
   valueDelayMagiaEsferaDagua: 0
   magiaEsferaDagua: {fileID: 7870728460752665831, guid: 4f340f7839a617740abf65a5246d0684,
     type: 3}
+  delayMagiaEspinhoDagua: 5
+  valueDelayMagiaEspinhosDagua: 0
   magiaEspinhosDagua: {fileID: 6138819549691703761, guid: f6d2a37ffa5705340975d5a918aab0be,
     type: 3}
+  fxSpawn: {fileID: 4094001478104991086, guid: a3a06abfd9f29424a857a446e5279159, type: 3}
 --- !u!1 &1487263468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,8 +1214,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140711889}
         m_TargetAssemblyTypeName: PlayerMagics, Assembly-CSharp
-        m_MethodName: SpawnMagics
-        m_Mode: 5
+        m_MethodName: SpawnEsferaDagua
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1908,8 +1916,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140711889}
         m_TargetAssemblyTypeName: PlayerMagics, Assembly-CSharp
-        m_MethodName: SpawnMagics
-        m_Mode: 5
+        m_MethodName: SpawnEspinhosDagua
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1984,5 +1992,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140711884}
-  m_RootOrder: 1
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2125781360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125781361}
+  m_Layer: 0
+  m_Name: spawnPointFxSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2125781361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125781360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.361, y: 0.06, z: -0.268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1140711884}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

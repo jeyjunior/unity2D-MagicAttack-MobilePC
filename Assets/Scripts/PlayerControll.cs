@@ -16,6 +16,7 @@ public class PlayerControll : MonoBehaviour
     public AnimationClip[] clipsAnim;
 
     //SpawnArea
+    public Transform spawnPointFxSpawn;
     public Transform spawnPointHand;
     public Transform spawnPointEspinhos;
 
